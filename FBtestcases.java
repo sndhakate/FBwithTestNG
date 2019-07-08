@@ -128,20 +128,20 @@ public class FacebookTestCases {
 		
 		WebElement passwordactual = driver.findElement(By.xpath("//input[@type ='password']"));
 		passwordactual.sendKeys("swapnil08");
-		String passwordexpected = "swpnl5141";
+		String passwordexpected = "password";
 		Assert.assertNotEquals(passwordactual, passwordexpected);
 		passwordactual.clear();
 		
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
 		System.out.println("Please enter usename as swpnl");
-		System.out.println("Please enter password swpnl5141");
+		System.out.println("Please enter password password");
 		System.out.println();
 	}
 	
 	@Test (priority=11, groups="Regression")
 	public void valid_Username_Password_Logout_Test() throws InterruptedException {
 		driver.findElement(By.xpath("//input[@type='email']")).sendKeys("swpnl");
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("swpnl5141");
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("your password");
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
 		System.out.println("Online");
 		System.out.println();
